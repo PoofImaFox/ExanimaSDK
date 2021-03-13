@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExanimaSDK", "ExanimaSDK\ExanimaSDK.csproj", "{44D8CCF9-6CB6-4C76-99E9-99A87E9DEE3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExanimaSDKTests", "ExanimaSDKTests\ExanimaSDKTests.csproj", "{CF5E4A77-9152-44ED-954A-0FB771432D6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44D8CCF9-6CB6-4C76-99E9-99A87E9DEE3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D8CCF9-6CB6-4C76-99E9-99A87E9DEE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D8CCF9-6CB6-4C76-99E9-99A87E9DEE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D8CCF9-6CB6-4C76-99E9-99A87E9DEE3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5E4A77-9152-44ED-954A-0FB771432D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5E4A77-9152-44ED-954A-0FB771432D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5E4A77-9152-44ED-954A-0FB771432D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5E4A77-9152-44ED-954A-0FB771432D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54B459AE-B33A-4D01-ADD5-CD58BD4BE347}
+	EndGlobalSection
+EndGlobal
