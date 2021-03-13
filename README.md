@@ -26,7 +26,7 @@ Directory.CreateDirectory(unpackLocation);
 
 var runningTaskList = new Task[packedFiles.Length];
 for (var x = 0; x < packedFiles.Length; x++) {
-	runningTaskList[x] = UnpackFileAsync(packedFiles[x], resourceFile, unpackLocation);
+	runningTaskList[x] = resourceFile.UnpackFile(packedFiles[x], unpackLocation);
 }
 Task.WaitAll(runningTaskList);
 ```
