@@ -48,6 +48,14 @@ namespace ExanimaSDK.Resources.Interfaces {
         public Task<byte[]> ReadFileFromStreamAsync(IPackedFileInfo resourcePackFile);
 
         /// <summary>
+        /// Unpack a packed file into the specified directory.
+        /// </summary>
+        /// <param name="resourcePackFile"></param>
+        /// <param name="unpackDirectory"></param>
+        /// <returns></returns>
+        public Task UnpackFile(IPackedFileInfo resourcePackFile, string unpackDirectory);
+
+        /// <summary>
         /// This will read the contents on the packed resource file.
         /// </summary>
         /// <returns></returns>

@@ -76,6 +76,13 @@ namespace ExanimaSDK.Resources {
             return await ResourcesFileStream.ReadBytesAsync((int)resourcePackFile.Size);
         }
 
+        public async Task UnpackFile(IPackedFileInfo resourcePackFile, string unpackDirectory) {
+            var fileData = await ReadFileFromStreamAsync(resourcePackFile);
+
+            resourcePackFile.UnpackedFileLocation = $"{unpackDirectory}\\{resourcePackFile.Name}{resourcePackFile.Extension}";
+            File.WriteAllBytes(resourcePackFile.UnpackedFileLocation, fileData);
+        }
+
         public void Dispose() {
             ResourcesFileStream.Dispose();
         }

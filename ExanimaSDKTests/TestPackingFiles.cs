@@ -34,14 +34,6 @@ namespace ExanimaSDKTests {
             return packedFile;
         }
 
-        private async Task UnpackFileAsync(IPackedFileInfo file, IResourcePackFile resourceFile, string unpackLocation) {
-            Assert.StartsWith("testfile", file.Name);
-            var fileData = await resourceFile.ReadFileFromStreamAsync(file);
-
-            file.UnpackedFileLocation = $"{unpackLocation}\\{file.Name}";
-            File.WriteAllBytes(file.UnpackedFileLocation, fileData);
-        }
-
         [Fact]
         public void TestPackingRoundTrip() {
             var fileCount = 200;
@@ -58,7 +50,9 @@ namespace ExanimaSDKTests {
 
             var runningTaskList = new Task[packedFiles.Length];
             for (var x = 0; x < packedFiles.Length; x++) {
-                runningTaskList[x] = UnpackFileAsync(packedFiles[x], resourceFile, unpackLocation);
+                Assert.StartsWith("testfile", packedFiles[x].Name);
+
+                runningTaskList[x] = resourceFile.UnpackFile(packedFiles[x], unpackLocation);
             }
 
             Task.WaitAll(runningTaskList);
