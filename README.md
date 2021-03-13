@@ -18,7 +18,7 @@ This is a fully documented and extensive C# SDK for the Exanima game.
 ## Code Snippets:
 *Unpack resource files* 
 ```c#
-var packedRpkFile = "packedFile.rpk"
+var packedRpkFile = "packedFile.rpk";
 var resourceFile = new ResourcePackFile(packedRpkFile);
 var packedFiles = resourceFile.ReadPackedFiles();
 var unpackLocation = "unpackedTestdir";
